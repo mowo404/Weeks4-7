@@ -897,7 +897,7 @@ MonoBehaviour:
       - m_Target: {fileID: 5933828163805790670, guid: 0ff770c8d848f1b479e0d5535cef920a, type: 3}
         m_TargetAssemblyTypeName: BirdShow, Assembly-CSharp
         m_MethodName: BirdButton
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1040,8 +1040,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1624192701}
         m_TargetAssemblyTypeName: BirdShow, Assembly-CSharp
-        m_MethodName: BirdButton
-        m_Mode: 6
+        m_MethodName: BirdButtonOff
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1143,6 +1143,10 @@ PrefabInstance:
     - target: {fileID: 630510600848237688, guid: 0ff770c8d848f1b479e0d5535cef920a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5933828163805790670, guid: 0ff770c8d848f1b479e0d5535cef920a, type: 3}
+      propertyPath: On
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6729077192535038212, guid: 0ff770c8d848f1b479e0d5535cef920a, type: 3}
       propertyPath: m_Name
