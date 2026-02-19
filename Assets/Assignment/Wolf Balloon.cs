@@ -13,8 +13,10 @@ public class WolfBalloon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //rotate if spin = true
         if (Spin)
         {
+            //set currentRotation of balloon to increasing by rSpeed * deltaTime
             Vector3 currentRotation = transform.eulerAngles;
             currentRotation.z += rSpeed * Time.deltaTime;
             transform.eulerAngles = currentRotation;

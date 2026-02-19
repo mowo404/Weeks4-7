@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System;
+using TMPro;
 using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
@@ -9,6 +10,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public GameObject wolfballoon;
     public GameObject currentspawn;
     public bool button = false;
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI sliderValue;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +22,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //make timerText write out  where the timer is
+        timerText.text = t.ToString();
+
+       
 
         if (button)
         {
@@ -35,6 +42,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
     }
     
+    //function to reset timer
     public void TimerReset()
     {
         t = tMax;
@@ -69,5 +77,17 @@ public class NewMonoBehaviourScript : MonoBehaviour
         //fetch bool for spin
         balloonscript.Spin = !balloonscript.Spin; 
 
+    }
+
+    //declare slider value variable
+    public void Slider(float BalloonUp)
+    {
+        //setting y value to slider value
+        Vector3 wolfpos = currentspawn.transform.position;
+        wolfpos.y = BalloonUp;
+        currentspawn.transform.position = wolfpos;
+
+        //make sliderValue wirte out what value slider is at
+        sliderValue.text = BalloonUp.ToString();
     }
 }
